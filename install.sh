@@ -22,6 +22,8 @@ cp ./.zshrc ~
 #### in vscode settings for devcontainer (not for User or Workspace), Search for terminal.integrated.fontFamily value, and set it to "Roboto Mono for Powerline" (or any of those: https://github.com/powerline/fonts#font-families font families).
 # save current zshrc
 mv ~/.zshrc ~/.zshrc.bak
+cp ./zshrc ~
 
 sudo sh -c "$(wget -O- https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)" -- \
     -t agnoster
+
