@@ -1,0 +1,28 @@
+[core]
+	editor = \"C:\\Users\\ercenk\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+	autocrlf = input
+[user]
+	name = Ercenk Keresteci
+	email = ercenk@ercenk.com
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[rerere]
+	# from https://youtu.be/aolI_Rz0ZqY?t=904
+	enabled = true	
+[branch]
+	# from https://youtu.be/aolI_Rz0ZqY?t=1034
+	sort = -committerdate	
+
+[alias]
+	# from https://youtu.be/aolI_Rz0ZqY?t=700
+	fblame = blame -w -C -C -C
