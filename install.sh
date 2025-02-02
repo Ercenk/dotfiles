@@ -4,6 +4,11 @@ cp ./.gitmessage ~
 cp ./.gitconfig ~
 git config --global commit.template ~/.gitmessage
 
+if [ ! -d "$HOME/.streamlit" ]; then
+    mkdir "$HOME/.streamlit"
+fi
+cp -r ./.streamlit/* "$HOME/.streamlit/"
+
 # powerline fonts for zsh agnoster theme
 git clone https://github.com/powerline/fonts.git
 cd fonts
